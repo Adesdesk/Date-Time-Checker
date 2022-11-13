@@ -1,0 +1,24 @@
+"""
+This simple program with tkinter is an instant date and time (GMT) checker
+Users can tap on the first displayed button to check time and date in real time
+Copy submitted by Adeola David Adelakun
+"""
+# Import the tkinter and datetime Modules
+
+import datetime
+import tkinter
+from tkinter import messagebox
+
+# to create root window
+root = tkinter.Tk()
+
+# set dimensions and title for the root window
+root.title("Adesdesk Date-Time Checker")
+root.geometry("500x300")
+
+
+# defining a function to display current date and time when button is clicked
+def time_and_date_now():
+  today = datetime.datetime.now()
+  dt_string = today.strftime("%d/%m/%Y \n %H:%M:%S")
+  messagebox.showinfo("Now: ", dt_string)
